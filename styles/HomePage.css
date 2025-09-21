@@ -1,0 +1,238 @@
+.home {
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0;
+  padding: 60px 20px;
+  background-color: #ebfbff;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e2a78;
+}
+
+.typed-word {
+  color: #2f3d8a;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #2f3d8a;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.specialties {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.specialties h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 70px;
+  padding-bottom: 35px;
+  color: #2f2f2f;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.specialty-card {
+  background: #2f3d8a;
+  border-radius: 6px;
+  padding: 60px 16px 16px;
+  text-align: center;
+  color: white;
+  width: 180px;
+  height: 140px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-10px);
+}
+
+.specialty-card img {
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  
+  transition: transform 0.5s ease;
+
+}
+
+.specialty-card p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 120px;
+}
+
+
+
+ /* ===== Секция синего баннера ===== */
+.service-banner {
+  background-color: #1e2a78; /* синий фон */
+  position: relative;
+  text-align: center;
+}
+
+/* Белая полоса вверху баннера для эффекта */
+.service-banner::before {
+  content: "";
+  display: block;
+  height: 50px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для зеленых таблеток (декорация за карточками) */
+.pills-container {
+  position: absolute;
+  bottom: 13.5rem; /* можно настроить позиционирование */
+  right: 12rem;
+  z-index: 25; /* ниже карточек */
+}
+
+.pills-container img {
+  width: 60%; /* настроить размер по необходимости */
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.pills-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Эффект для пластыря (крестика) при наведении */
+.cross-container img {
+  width: 60%; /* размер пластыря */
+  height: auto;
+  transition: transform 0.8s;
+}
+
+.cross-container img:hover {
+  transform: rotate(180deg);
+}
+.cross-container {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+/* Чтобы обе обёртки вели себя одинаково */
+.card-container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+/* Контейнер карточек */
+.service-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15rem;  /* увеличенное расстояние между карточками */
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  position: relative;
+}
+
+/* Обёртка для левой и правой карточки и нижнего текста */
+
+/* Стили карточек */
+.service-card {
+  background-color: #CBF463;
+  border-radius: 10px;
+  width: 100%; /* фиксированная одинаковая ширина */
+  height: 240px;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Кнопки – без подчёркивания, с заданными цветами */
+.service-link {
+  display: inline-block;
+  background-color: #007577; /* фон кнопки */
+  color: #CBF463;            /* цвет текста кнопки */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* убираем подчеркивание */
+  font-weight: bold;
+  align-self: flex-end;
+  margin-top: auto;  /* для карточки назначений: справа */
+}
+.service-card.reviews .card-text {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  word-break: break-word;
+  margin: 0;
+}
+.service-card.appointment .card-text h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  padding-top: 10px;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre-line;
+}
+/* Для карточки отзывов – кнопка растянута по ширине */
+.service-card.reviews .service-link {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  margin-top: 1.3rem;
+}
+.service-card.appointment .service-link {
+  margin-top: -0.5rem; /* регулируй по вкусу */
+  align-self: flex-end;
+}
+/* Текст, расположенный сразу под левой карточкой */
+.card-before {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #dbff8d;
+  align-self: flex-start;
+}

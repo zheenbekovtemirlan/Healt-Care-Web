@@ -1,0 +1,405 @@
+/* DoctorsList.css */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.doctors-container {
+  padding: 2rem;
+  background-color: #f6fbff;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3E8B;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb-link {
+  color: #5d7173;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #384A9C;
+}
+
+.active {
+  color: #2D3E8B;
+  font-weight: 600;
+}
+
+.doctors-grid {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns:repeat(4, auto);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.doctor-card {
+  width: 300px;
+  height: 380px;
+  border-radius: 11px;
+  border: 1.5px solid rgb(58, 74, 142);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s;
+  background: #fff;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+ 
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+  to top,
+  rgba(45, 62, 139, 0.8) 0%,
+  rgba(0, 0, 0, 0) 70%
+);
+z-index: 1;
+}
+
+.doctor-info {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0rem;
+  left: 1rem;
+  z-index: 2;
+  color: white;
+  text-align: left;
+  flex-direction: column;
+}
+.doctor-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem; /* Ð½Ð¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ Ð¸Ð¼ÐµÐ½ÐµÐ¼ Ð¸ ÐºÐ½Ð¾Ð¿ÐºÐ¾Ð¹ */
+}
+
+
+.doctor-specialty {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  opacity: 1; 
+}
+
+.more-info-btn {
+  background-color: #384A9C;
+  color: #CBF463;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.8);
+  font-family: 'Poppins', sans-serif;
+}
+
+.more-info-btn:hover {
+  background-color: #2b3a6d;
+}
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  background-color: #2d3e8b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page-btn:hover {
+  background-color: #1c2960;
+}
+.add-doctor-btn {
+  background-color: #384A9C;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+  transition: all 0.2s ease;
+}
+.add-doctor-btn:hover {
+  background-color: #2d3e8b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: #CBF463;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #f0faff;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.modal h2 {
+  color: #2D3E8B;
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  color: #2D3E8B;
+  margin-bottom: 1.2rem;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modal input,
+.modal textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.cancel-btn,
+.yes-btn {
+  width: 100px; 
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #384A9C;
+  color: white;
+}
+
+.yes-btn {
+  background: #CBF463;
+  color: #2D3E8B;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.doctor-modal {
+  width: 720px;
+  background-color: #e7faff;
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2D3E8B;
+  margin-bottom: 1rem;
+}
+
+.doctor-form {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+
+}
+
+.add-doctor-form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-placeholder {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #bfcce0;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #c0c0c0;
+  margin-bottom: 0.5rem;
+}
+.edit-text {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #2D3E8B;
+}
+.label-small {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2D3E8B;
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+}
+.add-doctor-form-left input {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 0.5rem;
+}
+.rating {
+  font-size: 0.9rem;
+  color: #2D3E8B;
+  margin-top: 0.7rem;
+  margin-right: 6.5rem;
+}
+
+.add-doctor-form-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15rem; 
+  margin-top: -18.8rem;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-right label {
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  color: #2D3E8B;
+
+}
+.add-doctor-form-right input,
+.add-doctor-form-right textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.modal select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+
+.submit-btn {
+  align-self: flex-end;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #2D3E8B;
+  color: #CBF463;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.submit-btn:hover {
+  background-color: #1c2960;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2D3E8B;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+}
+
+.delete-btn:hover {
+  background-color: #1c2960;
+  color: #CBF463;
+}

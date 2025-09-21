@@ -1,0 +1,75 @@
+.new-footer {
+    background-color: #262828;
+    color: #717680;
+    padding: 3rem 2rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+/* DocSpot & Contacts */
+.footer-top {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-brand,
+.footer-contacts {
+    flex: 1 1 300px;
+    min-width: 220px;
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #717680;
+    margin-bottom: 0.5rem;
+}
+
+.footer-description,
+.footer-contacts p {
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+}
+
+/* Ссылки слева */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start; /* ВАЖНО: ссылки теперь слева */
+    margin: 2rem auto 1.5rem;
+    max-width: 90%;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Линия */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #717680;
+    width: 90%;
+    margin: 0 auto 1.5rem;
+}
+
+/* Нижний текст */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+
+
